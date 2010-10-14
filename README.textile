@@ -18,7 +18,8 @@ If you don't already you can clone this Git repository in your ${HOME}/.rebar/te
 </pre>
 (Thanks "@dizzyd":http://twitter.com/dizzyd for the pointer.)
 
-Alternatively you can add this as a submodule under ${PROJECT_ROOT}/priv/templates if you want to use this.
+Alternatively you can add this as a submodule under ${PROJECT_ROOT}/priv/templates if you want to use 
+these templates just for a particular project.
 
 HTH
 "@SusanPotter":http://twitter.com/SusanPotter
