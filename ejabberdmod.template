@@ -1,0 +1,2 @@
+{variables, [{appid, "myejabberdmod"}]}.
+{template, "ejabberdmod.erl", "src/mod_{{appid}}.erl"}.
