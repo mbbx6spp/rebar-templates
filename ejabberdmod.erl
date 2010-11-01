@@ -1,12 +1,12 @@
 %%%----------------------------------------------------------------------
-%%% File    : {{module}}.erl
-%%% Author  : Susan Potter <me@susanpotter.net>
-%%% Purpose : ejabberd module that ... listens to packets sent and
-%%%           received by users.
+%%% File    : mod_{{name}}.erl
+%%% Author  : {{author_name}}
+%%% Purpose : ejabberd module that ... listens to packets sent & received 
+%%%           by users.
 %%%----------------------------------------------------------------------
 
--module({{module}}).
--author('me@susanpotter.net').
+-module(mod_{{name}}).
+-author({{author_name}}).
 
 -behaviour(gen_mod).
 
@@ -16,7 +16,7 @@
 -include("ejabberd.hrl").
 -include("jlib.hrl").
 
--define(PROCNAME, ejabberd_{{module}}).
+-define(PROCNAME, ejabberd_{{name}}).
 
 %% -------------------
 %% Module control

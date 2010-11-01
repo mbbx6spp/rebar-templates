@@ -1,9 +1,11 @@
-%%
-%% Module {{name}}
-%%
+%%%----------------------------------------------------------------------
+%%% File    : {{name}}.erl
+%%% Author  : {{author_name}}
+%%% Purpose : gen_server that ....
+%%%----------------------------------------------------------------------
 -module({{name}}).
+-author({{author_name}}).
 
--author("Susan Potter <me@susanpotter.net>").
 -behaviour(gen_server).
 
 -export([start_link/0]).
