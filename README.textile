@@ -2,10 +2,11 @@ h1. Rebar Templates
 
 h2. Overview
 
-This might really only be useful for me, but I thought I would share the Rebar templates that I have 
-written to streamline my Erlang development.
+This might really only be useful for me, but I thought I would share the 
+Rebar templates that I have written to streamline my Erlang development.
 
-So far it only consists of an ejabberd module template.
+So far it only consists of an ejabberd module, a gen_server and a gen_event 
+template.
 
 h2. Notes
 
