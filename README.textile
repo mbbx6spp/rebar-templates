@@ -22,5 +22,14 @@ If you don't already you can clone this Git repository in your ${HOME}/.rebar/te
 Alternatively you can add this as a submodule under ${PROJECT_ROOT}/priv/templates if you want to use 
 these templates just for a particular project.
 
+h2. Develoer(s)
+
+* "Susan Potter":http://twitter.com/SusanPotter
+
+h2. Contributor(s)
+
+* "Ahmed D. Omar":http://twitter.com/spawn_think - bug fix in ejabberdmod template (s/init\/7/init\/2/ in exports).
+
 HTH
 "@SusanPotter":http://twitter.com/SusanPotter
+
