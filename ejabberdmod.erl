@@ -10,7 +10,7 @@
 
 -behaviour(gen_mod).
 
--export([start/2, init/7, stop/1,
+-export([start/2, init/2, stop/1,
 	 send_packet/3, receive_packet/4]).
 
 -include("ejabberd.hrl").
