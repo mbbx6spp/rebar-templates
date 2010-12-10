@@ -1,13 +1,10 @@
 {variables, [
   {project_name, "myproject"}, 
-  {copyright_year, 2010},
+  {copyright_year, "2010"},
   {author_name, "Susan Potter"},
-  {author_email, "me@susanpotter.net"}
+  {author_email,"me@susanpotter.net"},
+  {description, "Fill in description of project here."}
 ]}.
-{file, "project_rebar.config", "rebar.config"}.
-{file, "project_Emakefile", "Emakefile"}.
-{file, "project_Makefile", "Makefile"}.
-{file, "project_gitignore", ".gitignore}.
 {dir, "deps"}.
 {dir, "src"}.
 {dir, "ebin"}.
@@ -15,3 +12,7 @@
 {dir, "tests"}.
 {dir, "priv"}.
 {template, "project_README", "README"}.
+{file, "project_rebar.config", "rebar.config"}.
+{file, "project_Emakefile", "Emakefile"}.
+{file, "project_Makefile", "Makefile"}.
+{file, "project_gitignore", ".gitignore"}.
