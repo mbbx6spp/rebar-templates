@@ -13,6 +13,10 @@
 -export([code_change/3]).
 -export([stop/0, terminate/2]).
 
+-ifdef(TEST).
+-compile(export_all).
+-endif.
+
 % start_link
 start_link() ->
   gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).

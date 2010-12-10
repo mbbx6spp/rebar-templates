@@ -18,6 +18,10 @@
 
 -define(PROCNAME, ejabberd_{{name}}).
 
+-ifdef(TEST).
+-compile(export_all).
+-endif.
+
 %% -------------------
 %% Module control
 %% -------------------

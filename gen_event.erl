@@ -10,6 +10,10 @@
 
 -export([init/1, handle_event/2, terminate/2]).
 
+-ifdef(TEST).
+-compile(export_all).
+-endif.
+
 % initializes gen_event
 init(Args) ->
   {ok, Args}.
