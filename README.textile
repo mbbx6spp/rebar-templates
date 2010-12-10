@@ -5,8 +5,11 @@ h2. Overview
 This might really only be useful for me, but I thought I would share the 
 Rebar templates that I have written to streamline my Erlang development.
 
-So far it only consists of an ejabberd module, a gen_server and a gen_event 
-template.
+So far it only consists of templates for the following:
+* ejabberd module
+* gen_server
+* gen_event
+* simple rebar project layout
 
 h2. Notes
 
@@ -29,6 +32,47 @@ h2. Developer(s)
 h2. Contributor(s)
 
 * "Ahmed D. Omar":http://twitter.com/spawn_think - bug fix in ejabberdmod template (s/init\/7/init\/2/ in exports).
+
+h2. Examples
+
+h3. Rebar Project Layout
+
+If you want to create a new rebar directory layout for your new project you can do the following:
+
+<pre>
+<code>
+ $ mkdir project_name
+ $ cd project_name
+ $ rebar create template=project project_name=project_name description="Describe your project here."
+</code>
+</pre>
+
+This will generate 6 directories and 4 files by default that are organized like the following:
+<pre>
+<code>
+.
+├── deps/
+├── ebin/
+├── Emakefile
+├── include/
+├── Makefile
+├── priv/
+├── README
+├── rebar.config
+├── src/
+└── tests/
+</code>
+</pre>
+
+h3. ejabberd Module
+
+To generate a stub of an ejabberd extension module that intercepts sent and received packets you can do the following:
+<pre>
+<code>
+ # inside your rebar based project directory
+ $ rebar create template=ejabberdmod name=mod_name_here
+</code>
+</pre>
 
 HTH
 "@SusanPotter":http://twitter.com/SusanPotter
