@@ -1,0 +1,11 @@
+h1. {{project_name}}
+
+{{description}}
+
+h2. Author(s)
+
+* {{author_name}} <{{author_email}}>
+
+h2. Copyright
+
+Copyright (c) {{copyright_year}} {{author_name}} <{{author_email}}>.  All rights reserved.
