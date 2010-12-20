@@ -1,0 +1,8 @@
+{variables, [
+  {module_name, "mymodule"}, 
+  {copyright_year, "2010"},
+  {author_name, "Susan Potter"},
+  {author_email,"me@susanpotter.net"}
+]}.
+{dir, "tests"}.
+{template, "eunit.erl", "tests/{{module_name}}_tests.erl"}.
