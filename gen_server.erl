@@ -1,7 +1,7 @@
 %%%----------------------------------------------------------------------
-%%% File    : {{name}}.erl
-%%% Author  : {{author_name}} <{{author_email}}>
-%%% Purpose : gen_server that ....
+%% @author {{author_name}} <{{author_name}}>
+%% @copyright {{copyright_year}} {{author_name}}
+%% @doc gen_server that ...
 %%%----------------------------------------------------------------------
 -module({{name}}).
 -author('{{author_name}} <{{author_email}}>').
