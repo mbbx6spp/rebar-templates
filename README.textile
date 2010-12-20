@@ -69,7 +69,7 @@ h3. ejabberd Module
 To generate a stub of an ejabberd extension module that intercepts sent and received packets you can do the following:
 <pre>
 <code>
- # inside your rebar based project directory
+ %% inside your rebar based project directory
  $ rebar create template=ejabberdmod name=mod_name_here
 </code>
 </pre>
