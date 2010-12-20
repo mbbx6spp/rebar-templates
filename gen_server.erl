@@ -1,10 +1,10 @@
 %%%----------------------------------------------------------------------
 %%% File    : {{name}}.erl
-%%% Author  : {{author_name}}
+%%% Author  : {{author_name}} <{{author_email}}>
 %%% Purpose : gen_server that ....
 %%%----------------------------------------------------------------------
 -module({{name}}).
--author({{author_name}}).
+-author('{{author_name}} <{{author_email}}>').
 
 -behaviour(gen_server).
 

@@ -1,12 +1,10 @@
-%%%----------------------------------------------------------------------
-%%% File    : mod_{{name}}.erl
-%%% Author  : {{author_name}}
-%%% Purpose : ejabberd module that ... listens to packets sent & received 
-%%%           by users.
-%%%----------------------------------------------------------------------
+%% == mod_{{name}}.erl ==
+%% @author {{author_name}} <{{author_name}}>
+%% @copyright {{copyright_year}} {{author_name}}
+%% @doc ejabberd module that ... listens to packets sent & received by users.
 
 -module(mod_{{name}}).
--author({{author_name}}).
+-author('{{author_name}} <{{author_email}}>').
 
 -behaviour(gen_mod).
 

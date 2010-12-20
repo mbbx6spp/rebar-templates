@@ -1,10 +1,10 @@
 %%%----------------------------------------------------------------------
-%%% File    : {{name}}.erl
-%%% Author  : {{author_name}}
-%%% Purpose : gen_event that ....
+%% @author {{author_name}} <{{author_name}}>
+%% @copyright {{copyright_year}} {{author_name}}
+%% @doc gen_event that ...
 %%%----------------------------------------------------------------------
 -module({{name}}).
--author({{author_name}}).
+-author('{{author_name}} <{{author_email}}>').
 
 -behaviour(gen_event).
 
