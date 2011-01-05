@@ -10,5 +10,5 @@ main([])->
   usage().
 
 usage() ->
-  io:format("Usage: ~s ...", [?CMD]),
+  io:format("Usage: ~s ...~n", [?CMD]),
   halt(1).
