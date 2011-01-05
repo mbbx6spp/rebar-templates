@@ -6,7 +6,7 @@
 
 %% External API
 
-main([])->
+main(_)->
   usage().
 
 usage() ->
