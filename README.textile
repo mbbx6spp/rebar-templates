@@ -10,6 +10,7 @@ So far it only consists of templates for the following:
 * gen_server
 * gen_event
 * simple rebar project layout
+* escript starter script
 
 h2. Notes
 
