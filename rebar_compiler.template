@@ -1,0 +1,10 @@
+{variables, [
+  {compiler_name, "compilername"}, 
+  {copyright_year, "2011"},
+  {author_name, "Susan Potter"},
+  {author_email,"me@susanpotter.net"}
+]}.
+{dir, "src"}.
+{template, "rebar_compiler.erl", "src/{{compiler_name}}_compiler.erl"}.
+{dir, "test"}.
+{template, "rebar_compiler_SUITE.erl", "test/{{compiler_name}}_SUITE.erl"}.
