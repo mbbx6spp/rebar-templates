@@ -1,0 +1,8 @@
+{variables, [
+  {suite_name, "suitename"}, 
+  {copyright_year, "2011"},
+  {author_name, "Susan Potter"},
+  {author_email,"me@susanpotter.net"}
+]}.
+{dir, "test"}.
+{template, "ctsuite.erl", "test/{{suite_name}}_SUITE.erl"}.
