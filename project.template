@@ -9,7 +9,7 @@
 {dir, "src"}.
 {dir, "ebin"}.
 {dir, "include"}.
-{dir, "tests"}.
+{dir, "test"}.
 {dir, "priv"}.
 {template, "project_README", "README"}.
 {file, "project_rebar.config", "rebar.config"}.
