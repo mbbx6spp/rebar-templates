@@ -1,5 +1,6 @@
 %%% @author {{author_name}} <{{author_email}}> 
 %%% @since {{date}}
+%%% @copyright {{copyright_year}} {{author_name}}
 %%% @doc {{description}}
 %%% @end
 
@@ -17,7 +18,7 @@
 %%       Config = [tuple()]
 %% @doc returns list of tuples to set default properties for the suite.
 suite() ->
-    [{timetrap,{minutes,10}}].
+  [{timetrap,{minutes,10}}].
 
 %% @spec init_per_suite(Config0) -> 
 %%         Config1 | {skip, Reason} | {skip_and_save, Reason, Config1}
@@ -27,14 +28,14 @@ suite() ->
 %% @doc runs initialization before matching test suite is executed. 
 %%      This function may add key/value pairs to Config.
 init_per_suite(Config) ->
-    Config.
+  Config.
 
 %% @spec end_per_suite(Config0) -> ok | {save_config, Config1}
 %% where
 %%       Config0 = Config1 = [tuple()]
 %% @doc runs cleanup after matching test suite is executed.
 end_per_suite(_Config) ->
-    ok.
+  ok.
 
 %% @spec init_per_group(GroupName, Config0) -> 
 %%         Config1 | {skip, Reason} | {skip_and_save, Reason, Config1}
@@ -44,7 +45,7 @@ end_per_suite(_Config) ->
 %%       Reason = term()
 %% @doc runs initialization before matching test group is executed.
 init_per_group(_GroupName, Config) ->
-    Config.
+  Config.
 
 %% @spec end_per_group(GroupName, Config0) -> ok | {save_config, Config1}
 %% where
@@ -52,7 +53,7 @@ init_per_group(_GroupName, Config) ->
 %%       Config0 = Config1 = [tuple()]
 %% @doc runs cleanup after matching test group is fully executed.
 end_per_group(_GroupName, _Config) ->
-    ok.
+  ok.
 
 %% @spec init_per_testcase(TestCase, Config0) ->
 %%         Config1 | {skip, Reason} | {skip_and_save, Reason, Config1}
@@ -63,7 +64,7 @@ end_per_group(_GroupName, _Config) ->
 %% @doc runs initialization before matching test case. Should not alter or 
 %%      remove any key/value pairs to the Config, but may add to it.
 init_per_testcase(_TestCase, Config) ->
-    Config.
+  Config.
 
 %% @spec end_per_testcase(TestCase, Config0) ->
 %%         ok | {save_config, Config1} | {fail, Reason}
@@ -73,7 +74,7 @@ init_per_testcase(_TestCase, Config) ->
 %%       Reason = term()
 %% @doc runs cleanup for matching test case.
 end_per_testcase(_TestCase, _Config) ->
-    ok.
+  ok.
 
 %% @spec groups() -> [Group]
 %% where
@@ -89,7 +90,7 @@ end_per_testcase(_TestCase, _Config) ->
 %%       N = integer() | forever
 %% @doc returns list of test case group definitions.
 groups() ->
-    [].
+  [].
 
 %% @spec all() -> Tests | {skip, Reason}
 %% where
@@ -99,7 +100,7 @@ groups() ->
 %%       Reason = term()
 %% @doc returns list of tests (group or testcase) to be run for all of suite.
 all() ->
-    [my_test_case].
+  [my_test_case].
 
 %%--------------------------------------------------------------------
 %% TEST CASES
@@ -110,23 +111,8 @@ all() ->
 %%       Info = [tuple()]
 %% @doc returns list of tuples to set properties for the test case.
 my_test_case() -> 
-    [].
-%%--------------------------------------------------------------------
-%% Function: TestCase(Config0) ->
-%%               ok | exit() | {skip,Reason} | {comment,Comment} |
-%%               {save_config,Config1} | {skip_and_save,Reason,Config1}
-%%
-%% Config0 = Config1 = [tuple()]
-%%   A list of key/value pairs, holding the test case configuration.
-%% Reason = term()
-%%   The reason for skipping the test case.
-%% Comment = term()
-%%   A comment about the test case that will be printed in the html log.
-%%
-%% Description: Test case function. (The name of it must be specified in
-%%              the all/0 list or in a test case group for the test case
-%%              to be executed).
-%%--------------------------------------------------------------------
+  [].
+
 %% @spec TestCase(Config0) ->
 %%         ok | exit() | {skip, Reason} | {comment, Comment} |
 %%         {save_config, Config} | {skip_and_save, Reason, Config1}
@@ -136,5 +122,5 @@ my_test_case() ->
 %%       Comment = term()
 %% @doc the test function.
 my_test_case(_Config) -> 
-    ok.
+  ok.
 
