@@ -1,6 +1,6 @@
 %%% @author {{author_name}} <{{author_email}}> 
 %%% @copyright {{copyright_year}} {{author_name}}
-%%% @doc Test suite for {{compiler_name}}_compiler module which {{description}}
+%%% @doc Test suite for {{compiler_name}} module which {{description}}
 %%% @end
 
 -module({{compiler_name}}_SUITE).
@@ -125,7 +125,7 @@ test_compile_2_ok() ->
 test_compile_2_ok(Config) -> 
   CompilerConfig = proplists:get_value(compiler_config, Config),
   CompilerAppfile = proplists:get_value(compiler_appfile, Config),
-  ok = {{compiler_name}}_compiler:compile(CompilerConfig, CompilerAppfile),
+  ok = {{compiler_name}}:compile(CompilerConfig, CompilerAppfile),
   ok.
 
 %% @spec TestCase() -> Info
@@ -148,6 +148,6 @@ test_compile_2_skipped() ->
 test_compile_2_skipped(Config) -> 
   CompilerConfig = proplists:get_value(compiler_config, Config),
   CompilerAppfile = proplists:get_value(compiler_appfile, Config),
-  skipped = {{compiler_name}}_compiler:compile(CompilerConfig, CompilerAppfile),
+  skipped = {{compiler_name}}:compile(CompilerConfig, CompilerAppfile),
   ok.
 
