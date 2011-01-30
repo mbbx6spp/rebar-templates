@@ -1,0 +1,11 @@
+{variables, [
+  {app_name, "appname"}, 
+  {app_dir, "."},
+  {copyright_year, "2011"},
+  {author_name, "Susan Potter"},
+  {author_email,"me@susanpotter.net"}
+]}.
+{dir, "{{app_dir}}/src"}.
+{template, "finapp.app.src", "{{app_dir}}/src/{{app_name}}.app.src"}.
+{template, "finapp_app.erl", "{{app_dir}}/src/{{app_name}}_app.erl"}.
+{template, "finapp_sup.erl", "{{app_dir}}/src/{{app_name}}_sup.erl"}.
