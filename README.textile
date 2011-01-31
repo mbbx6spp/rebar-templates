@@ -7,10 +7,12 @@ Rebar templates that I have written to streamline my Erlang development.
 
 So far it only consists of templates for the following:
 * ejabberd module
-* gen_server
-* gen_event
+* OTP gen_server callback modules
+* OTP gen_event callback modules
 * simple rebar project layout
 * escript starter script
+* OTP application and supervisor callback modules
+* Nitrogen page handler (for Nitrogen v2+)
 
 h2. Notes
 
