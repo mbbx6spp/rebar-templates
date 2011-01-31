@@ -1,3 +1,4 @@
+%%%'   HEADER
 %%% @author {{author_name}} <{{author_email}}> 
 %%% @since {{date}}
 %%% @copyright {{copyright_year}} {{author_name}}
@@ -8,10 +9,8 @@
 %% Note: This directive should only be used in test suites.
 -compile(export_all).
 -include_lib("common_test/include/ct.hrl").
-
-%%--------------------------------------------------------------------
-%% COMMON TEST CALLBACK FUNCTIONS
-%%--------------------------------------------------------------------
+%%%.
+%%%' CALLBACKS
 
 %% @spec suite() -> Config
 %% where
@@ -102,9 +101,8 @@ groups() ->
 all() ->
   [my_test_case].
 
-%%--------------------------------------------------------------------
-%% TEST CASES
-%%--------------------------------------------------------------------
+%%%.
+%%%'   TESTCASES
 
 %% @spec TestCase() -> Info
 %% where
@@ -123,4 +121,5 @@ my_test_case() ->
 %% @doc the test function.
 my_test_case(_Config) -> 
   ok.
-
+%%%.
+%%% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:

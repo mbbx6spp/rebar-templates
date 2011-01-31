@@ -1,7 +1,8 @@
-%% == mod_{{name}}.erl ==
+%%%'   HEADER
 %% @author {{author_name}} <{{author_name}}>
 %% @copyright {{copyright_year}} {{author_name}}
 %% @doc ejabberd module that ... listens to packets sent & received by users.
+%% @end
 
 -module(mod_{{name}}).
 -author('{{author_name}} <{{author_email}}>').
@@ -9,10 +10,10 @@
 -behaviour(gen_mod).
 
 -export([start/2, init/2, stop/1,
-	 send_packet/3, receive_packet/4]).
+   send_packet/3, receive_packet/4]).
 
--include("ejabberd.hrl").
--include("jlib.hrl").
+-include_lib("ejabberd/include/ejabberd.hrl").
+-include("ejabberd/include/jlib.hrl").
 
 -define(PROCNAME, ejabberd_{{name}}).
 
@@ -20,9 +21,9 @@
 -compile(export_all).
 -endif.
 
-%% -------------------
-%% Module control
-%% -------------------
+%%%.
+%%%'   CALLBACKS
+
 start(Host, Opts) ->
   Opt1 = gen_mod:get_opt(opt1, Opts, "default value"),
   % capture packets sent by user
@@ -47,39 +48,45 @@ init(Host, Opt1) ->
   % do something here instead of nothing
   loop(Host, Opt1).
 
-%% -------------------
-%% Loop
-%% -------------------
 loop(Host, Opt1) ->
   receive
     {persist, E} ->
       persist(E),
       loop(Host, Opt1);
-	  stop ->
-	    ok;
-  	_ ->
-	    loop(Host, Opt1)
+    stop ->
+      ok;
+    _ ->
+      loop(Host, Opt1)
   end.
 
-%% -------------------
-%% Public/Exported
-%% -------------------
+%%%.
+%%%'   PUBLIC API
+
+%% @spec send_packet(FromJID, ToJID, P) -> ??
+%% @doc 
+%% @end
 send_packet(FromJID, ToJID, P) ->
     Host = FromJID#jid.lserver,
     Proc = gen_mod:get_module_proc(Host, ?PROCNAME),
     Proc ! {persist, {send, FromJID, ToJID, P}}.
 
+%% @spec receive_packet(FromJID, ToJID, P) -> ??
+%% @doc 
+%% @end
 receive_packet(_JID, From, To, P) ->
     Host = To#jid.lserver,
     Proc = gen_mod:get_module_proc(Host, ?PROCNAME),
     Proc ! {persist, {recv, From, To, P}}.
 
-%% -------------------
-%% Private
-%% -------------------
+%%%.
+%%%'   PRIVATE FUNCTIONS
+
+%% @private
 persist({recv, From, To, P}) ->
   % do something with this data...like persist it somehow
   ok;
 persist({send, FromJID, ToJID, P}) -> 
   % do something with this data...like persist it somehow
   ok.
+%%%.
+%%% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:
