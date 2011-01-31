@@ -33,6 +33,11 @@ start_link() ->
   % gen_server:start_link(?MODULE, [], []). % for unnamed gen_server
   gen_server:start_link({local, ?SERVER}, ?MODULE, [], []).
 
+%% @doc stops gen_server implementation process
+%% @spec stop() -> ok
+stop() ->
+  gen_server:cast(?MODULE, stop).
+
 % TODO: add more public API here...
 
 %%%.
@@ -58,10 +63,6 @@ handle_info(_Info, State) ->
 %% @private
 code_change(_OldVsn, State, _Extra) ->
   {ok, State}.
-
-%% @private
-stop() ->
-  gen_server:cast(?MODULE, stop).
 
 %% @private
 terminate(normal, _State) ->
