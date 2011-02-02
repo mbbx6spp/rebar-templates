@@ -6,4 +6,4 @@
   {author_email,"me@susanpotter.net"}
 ]}.
 {dir, "test"}.
-{template, "ctsuite.erl", "test/{{suite_name}}_SUITE.erl"}.
+{template, "nitropage.erl", "src/{{page_name}}.erl"}.

@@ -2,4 +2,4 @@
   {name, "myserver"},
   {author_name, "Susan Potter"},
   {author_email, "me@susanpotter.net"}]}.
-{template, "gen_server.erl", "src/{{name}}.erl"}.
+{template, "finsrv.erl", "src/{{name}}_srv.erl"}.
