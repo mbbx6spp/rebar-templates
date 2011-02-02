@@ -6,4 +6,4 @@
   {author_email,"me@susanpotter.net"}
 ]}.
 {dir, "test"}.
-{template, "nitropage.erl", "src/{{page_name}}.erl"}.
+{template, "nitropage.erl", "src/{{page_name}}_page.erl"}.
