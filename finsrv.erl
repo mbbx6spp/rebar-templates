@@ -33,10 +33,18 @@ start_link() ->
   % gen_server:start_link(?MODULE, [], []). % for unnamed gen_server
   gen_server:start_link({local, ?SERVER}, ?MODULE, [], []).
 
+%% @doc start gen_server implementation without caller link
+%% @spec start() -> {ok, Pid} | ignore | {error, Error}
+%% where
+%%       Pid = pid(),
+%%       Error = {already_started, Pid} | term()
+start() ->
+  gen_server:start({local, ?SERVER}, ?MODULE, [], []).
+
 %% @doc stops gen_server implementation process
 %% @spec stop() -> ok
 stop() ->
-  gen_server:cast(?MODULE, stop).
+  gen_server:cast(?SERVER, stop).
 
 % TODO: add more public API here...
 
@@ -71,7 +79,7 @@ terminate(shutdown, _State) ->
   ok;
 terminate({shutdown, _Reason}, _State) ->
   ok;
-terminate(Reason, _State) ->
+terminate(_Reason, _State) ->
   ok.
 
 %%%.
