@@ -30,3 +30,9 @@ doc:
 	for app in $(APPS); do \
 		cp -R apps/$${app}/doc doc/$${app}; \
 	done;
+
+analyze:
+	rebar skip_deps=true analyze
+
+console:
+	erl -pa deps/*/ebin deps/*/include ebin include -boot start_sasl
