@@ -1,4 +1,0 @@
-{variables, [
-  {name, "myserver"},
-  {author_name, "Susan Potter <me@susanpotter.net>"}]}.
-{template, "gen_server.erl", "src/{{name}}.erl"}.
