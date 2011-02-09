@@ -7,23 +7,24 @@ APPS				:= $(shell dir apps)
 
 all: deps compile
 
-compile:
-	rebar compile
+compile: deps
+	@rebar compile
 
 deps:
-	rebar get-deps
+	@rebar get-deps
+	@rebar check-deps
 
 clean:
-	rebar clean
+	@rebar clean
 
 realclean: clean
-	rebar delete-deps
+	@rebar delete-deps
 
 test:
-	rebar skip_deps=true eunit
+	@rebar skip_deps=true ct
 
 rel: deps
-	rebar compile generate
+	@rebar compile generate
 
 doc:
 	rebar skip_deps=true doc
@@ -31,8 +32,14 @@ doc:
 		cp -R apps/$${app}/doc doc/$${app}; \
 	done;
 
-analyze:
-	rebar skip_deps=true analyze
-
 console:
-	erl -pa deps/*/ebin deps/*/include ebin include -boot start_sasl
+	@erl -pa deps/*/ebin deps/*/include ebin include -boot start_sasl
+
+analyze: checkplt
+	@rebar skip_deps=true dialyze
+
+buildplt:
+	@rebar skip_deps=true build-plt
+
+checkplt: buildplt
+	@rebar skip_deps=true check-plt
