@@ -1,9 +1,9 @@
 %%% @author {{author_name}} <{{author_email}}> 
 %%% @copyright {{copyright_year}} {{author_name}}
-%%% @doc Test suite for {{compiler_name}} module which {{description}}
+%%% @doc Test suite for {{name}} module which {{description}}
 %%% @end
 
--module({{compiler_name}}_SUITE).
+-module({{name}}_SUITE).
 %% Note: This directive should only be used in test suites.
 -compile(export_all).
 -include_lib("common_test/include/ct.hrl").
@@ -121,11 +121,11 @@ test_compile_2_ok() ->
 %%       Reason = term(),
 %%       Comment = term()
 %% @doc runs the test case function. Verifies the cases where 
-%% {{compiler_name}}_compiler:compile/2 should return ok.
+%% {{name}}_compiler:compile/2 should return ok.
 test_compile_2_ok(Config) -> 
   CompilerConfig = proplists:get_value(compiler_config, Config),
   CompilerAppfile = proplists:get_value(compiler_appfile, Config),
-  ok = {{compiler_name}}:compile(CompilerConfig, CompilerAppfile),
+  ok = {{name}}:compile(CompilerConfig, CompilerAppfile),
   ok.
 
 %% @spec TestCase() -> Info
@@ -144,10 +144,10 @@ test_compile_2_skipped() ->
 %%       Reason = term(),
 %%       Comment = term()
 %% @doc runs the test case function. Verifies the cases where 
-%% {{compiler_name}}_compiler:compile/2 should return ok.
+%% {{name}}_compiler:compile/2 should return ok.
 test_compile_2_skipped(Config) -> 
   CompilerConfig = proplists:get_value(compiler_config, Config),
   CompilerAppfile = proplists:get_value(compiler_appfile, Config),
-  skipped = {{compiler_name}}:compile(CompilerConfig, CompilerAppfile),
+  skipped = {{name}}:compile(CompilerConfig, CompilerAppfile),
   ok.
 

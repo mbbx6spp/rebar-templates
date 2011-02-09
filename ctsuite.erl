@@ -5,7 +5,7 @@
 %%% @doc {{description}}
 %%% @end
 
--module({{suite_name}}_SUITE).
+-module({{name}}_SUITE).
 %% Note: This directive should only be used in test suites.
 -compile(export_all).
 -include_lib("common_test/include/ct.hrl").

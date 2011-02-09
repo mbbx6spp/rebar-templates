@@ -1,9 +1,9 @@
 {variables, [
-  {page_name, "pagename"}, 
+  {name, "pagename"}, 
   {app_name, "app_name"},
   {copyright_year, "2011"},
   {author_name, "Susan Potter"},
   {author_email,"me@susanpotter.net"}
 ]}.
 {dir, "test"}.
-{template, "nitropage.erl", "src/{{app_name}}_{{page_name}}_page.erl"}.
+{template, "nitropage.erl", "src/{{app_name}}_{{name}}_page.erl"}.

@@ -1,6 +1,6 @@
 {variables, [
-  {project_name, "myproject"}, 
-  {copyright_year, "2010"},
+  {name, "myproject"}, 
+  {copyright_year, "2011"},
   {author_name, "Susan Potter"},
   {author_email,"me@susanpotter.net"},
   {description, "Fill in description of project here."}

@@ -5,7 +5,7 @@
 %%% {{description}}
 %%% @end
 
--module(mod_{{module_name}}).
+-module(mod_{{name}}).
 -author('{{author_name}} <{{author_email}}>').
 -behaviour(gen_server).
 

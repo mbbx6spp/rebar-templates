@@ -5,14 +5,14 @@
 %%% @doc {{description}}
 %%% @end
 
--module({{app_name}}_app).
+-module({{name}}_app).
 -behaviour(application).
 
 -export([start/2, stop/1]).
 %%%.
 %%%'   CALLBACKS
 start(_StartType, _StartArgs) ->
-  {{app_name}}_sup:start_link().
+  {{name}}_sup:start_link().
 
 stop(_State) ->
   ok.

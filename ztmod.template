@@ -1,5 +1,5 @@
 {variables, [
-  {module_name, "mymodule"}, 
+  {name, "mymodule"}, 
   {module_title, "Zotonic Module Title"},
   {module_priority, "500"},
   {copyright_year, "2011"},
@@ -7,21 +7,21 @@
   {author_email,"me@susanpotter.net"},
   {description, "<fill in description of Zotonic module here>."}
 ]}.
-{dir, ["mod_{{module_name}}"]}.
-{dir, ["mod_{{module_name}}", "actions"]}.
-{dir, ["mod_{{module_name}}", "dispatch"]}.
-{dir, ["mod_{{module_name}}", "lib"]}.
-{dir, ["mod_{{module_name}}", "lib", "css"]}.
-{dir, ["mod_{{module_name}}", "lib", "images"]}.
-{dir, ["mod_{{module_name}}", "lib", "js"]}.
-{dir, ["mod_{{module_name}}", "lib", "apps"]}.
-{dir, ["mod_{{module_name}}", "lib", "modules"]}.
-{dir, ["mod_{{module_name}}", "lib", "misc"]}.
-{dir, ["mod_{{module_name}}", "resources"]}.
-{dir, ["mod_{{module_name}}", "models"]}.
-{dir, ["mod_{{module_name}}", "scomps"]}.
-{dir, ["mod_{{module_name}}", "services"]}.
-{dir, ["mod_{{module_name}}", "templates"]}.
-{dir, ["mod_{{module_name}}", "filters"]}.
-{dir, ["mod_{{module_name}}", "validators"]}.
-{template, "ztmod.erl", "mod_{{module_name}}/mod_{{module_name}}.erl"}.
+{dir, ["mod_{{name}}"]}.
+{dir, ["mod_{{name}}", "actions"]}.
+{dir, ["mod_{{name}}", "dispatch"]}.
+{dir, ["mod_{{name}}", "lib"]}.
+{dir, ["mod_{{name}}", "lib", "css"]}.
+{dir, ["mod_{{name}}", "lib", "images"]}.
+{dir, ["mod_{{name}}", "lib", "js"]}.
+{dir, ["mod_{{name}}", "lib", "apps"]}.
+{dir, ["mod_{{name}}", "lib", "modules"]}.
+{dir, ["mod_{{name}}", "lib", "misc"]}.
+{dir, ["mod_{{name}}", "resources"]}.
+{dir, ["mod_{{name}}", "models"]}.
+{dir, ["mod_{{name}}", "scomps"]}.
+{dir, ["mod_{{name}}", "services"]}.
+{dir, ["mod_{{name}}", "templates"]}.
+{dir, ["mod_{{name}}", "filters"]}.
+{dir, ["mod_{{name}}", "validators"]}.
+{template, "ztmod.erl", "mod_{{name}}/mod_{{name}}.erl"}.

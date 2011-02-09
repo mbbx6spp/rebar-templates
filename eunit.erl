@@ -1,23 +1,23 @@
 %%%'   HEADER
 %% @author    {{author_name}} <{{author_name}}>
 %% @copyright {{copyright_year}} {{author_name}}
-%% @doc       EUnit test suite module {{module_name}}.
+%% @doc       EUnit test suite module {{name}}.
 %% @end
 
--module({{module_name}}_tests).
+-module({{name}}_tests).
 -author('{{author_name}} <{{author_email}}>').
 
 -define(NOTEST, true).
 -define(NOASSERT, true).
 -include_lib("eunit/include/eunit.hrl").
 
--define(MODNAME, {{module_name}}).
+-define(MODNAME, {{name}}).
 %%%.
 %%%' TEST GENERATOR
-%% @spec {{module_name}}_test_() -> List
+%% @spec {{name}}_test_() -> List
 %% where
 %%       List = [term()]
-{{module_name}}_test_() ->
+{{name}}_test_() ->
   %% add your asserts in the returned list, e.g.:
   %% [
   %%   ?assert(?MODNAME:double(2) =:= 4),

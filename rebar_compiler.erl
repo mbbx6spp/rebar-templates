@@ -4,7 +4,7 @@
 %%% @doc rebar compiler to {{description}}
 %%% @end
 %%%----------------------------------------------------------------------
--module({{compiler_name}}).
+-module({{name}}).
 -author('{{author_name}} <{{author_email}}>').
 
 -export([compile/2]).
