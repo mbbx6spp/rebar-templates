@@ -2,7 +2,7 @@
   {module_name, "mymodule"}, 
   {module_title, "Zotonic Module Title"},
   {module_priority, "500"},
-  {copyright_year, "2010"},
+  {copyright_year, "2011"},
   {author_name, "Susan Potter"},
   {author_email,"me@susanpotter.net"},
   {description, "<fill in description of Zotonic module here>."}
@@ -10,7 +10,7 @@
 {dir, ["mod_{{module_name}}"]}.
 {dir, ["mod_{{module_name}}", "actions"]}.
 {dir, ["mod_{{module_name}}", "dispatch"]}.
-%{dir, ["mod_{{module_name}}", "lib"]}.
+{dir, ["mod_{{module_name}}", "lib"]}.
 {dir, ["mod_{{module_name}}", "lib", "css"]}.
 {dir, ["mod_{{module_name}}", "lib", "images"]}.
 {dir, ["mod_{{module_name}}", "lib", "js"]}.
