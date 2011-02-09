@@ -1,4 +1,0 @@
-{variables, [
-  {name, "mylogger"}, 
-  {author_name, "Susan Potter <me@susanpotter.net>"}]}.
-{template, "gen_event.erl", "src/{{name}}.erl"}.

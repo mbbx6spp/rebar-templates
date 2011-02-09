@@ -1,5 +1,5 @@
 %%%'   HEADER
-%%% @author {{author_name}} <{{author_name}}>
+%%% @author {{author_name}} <{{author_email}}>
 %%% @copyright {{copyright_year}} {{author_name}}
 %%% @doc gen_event that {{description}}
 %%% @end
@@ -14,13 +14,17 @@
 -compile(export_all).
 -endif.
 %%%.
+%%%'   PUBLIC API
+%% TODO: Add public API methods here...
+
+%%%.
 %%%'   CALLBACKS
 %% @private
 %% @spec init(Args0) -> {ok, Args1}
 %% where
 %%       Args0 = Args1 = [term()]
 %% @doc initializes gen_event
-init(Args) ->
+init([]) ->
   {ok, Args}.
 
 %% @private
@@ -46,3 +50,10 @@ handle_event(_Message, State) ->
 %% terminates gen_event
 terminate(_Args, _State) ->
   ok.
+
+%%%.
+%%%'   PRIVATE FUNCTIONS
+%% TODO: Add private functions here...
+
+%%%.
+%%% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:
