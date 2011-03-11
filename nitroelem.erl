@@ -7,7 +7,7 @@
 -author('{{author_name}} <{{author_email}}>').
 
 -include_lib("nitrogen_core/include/wf.hrl").
--export(reflect/0, render_element/1).
+-export([reflect/0, render_element/1]).
 
 %% TODO: Make sure to add record definition to your app's header file. 
 
