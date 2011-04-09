@@ -12,6 +12,7 @@
 -export([content_types_accepted/2, charsets_provided/2, encodings_provided/2]).
 -export([previously_existed/2, moved_permanently/2, moved_temporarily/2]).
 -export([last_modified/2, expires/2, generate_etag/2, finish_request/2]).
+-export([service_available/2]).
 % to_X callback exports
 -export([to_json/2, to_plain_text/2, to_html/2]).
 
