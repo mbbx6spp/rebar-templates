@@ -19,7 +19,7 @@ render_action(Record) ->
   Target = Record#{{name}}_action.target,
   % TODO change script below to something you want JS to do.
   Script = "toString()",
-  [wf:f("objs('~s').", [Target], Script)].
+  [wf:f("objs('~s').", [Target]), Script].
 
 %%%.
 %%%'   PRIVATE FUNCTIONS
