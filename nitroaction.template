@@ -1,0 +1,8 @@
+{variables, [
+  {name, "actionname"}, 
+  {app_name, "app_name"},
+  {copyright_year, "2011"},
+  {author_name, "Susan Potter"},
+  {author_email,"me@susanpotter.net"}
+]}.
+{template, "nitroaction.erl", "src/{{app_name}}_{{name}}_action.erl"}.
