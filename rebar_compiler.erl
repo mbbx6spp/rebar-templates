@@ -1,5 +1,5 @@
 %%%----------------------------------------------------------------------
-%%% @author {{author_name}} <{{author_name}}>
+%%% @author {{author_name}} <{{author_email}}>
 %%% @copyright {{copyright_year}} {{author_name}}
 %%% @doc rebar compiler to {{description}}
 %%% @end
