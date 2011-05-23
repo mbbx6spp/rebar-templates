@@ -1,5 +1,5 @@
 %%%'   HEADER
-%% @author    {{author_name}} <{{author_name}}>
+%% @author    {{author_name}} <{{author_email}}>
 %% @copyright {{copyright_year}} {{author_name}}
 %% @doc       EUnit test suite module {{name}}.
 %% @end
