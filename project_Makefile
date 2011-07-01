@@ -2,8 +2,10 @@ ERL					?= erl
 ERLC				= erlc
 EBIN_DIRS		:= $(wildcard deps/*/ebin)
 APPS				:= $(shell dir apps)
+REL_DIR     = rel
 NODE				= {{name}}
 REL					= {{name}}
+SCRIPT_PATH  := $(REL_DIR)/$(NODE)/bin/$(REL)
 
 .PHONY: rel deps
 
@@ -28,17 +30,26 @@ test:
 rel: deps
 	@rebar compile generate
 
-start: rel
-	@./rel/$(NODE)/bin/$(REL) start
+start: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) start
 
-stop:
-	@./rel/$(NODE)/bin/$(REL) stop
+stop: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) stop
 
-ping:
-	@./rel/$(NODE)/bin/$(REL) ping
+ping: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) ping
 
-attach:
-	@./rel/$(NODE)/bin/$(REL) attach
+attach: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) attach
+
+console: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) console
+
+restart: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) restart
+
+reboot: $(SCRIPT_PATH)
+	@./$(SCRIPT_PATH) reboot
 
 doc:
 	rebar skip_deps=true doc
@@ -46,7 +57,7 @@ doc:
 		cp -R apps/$${app}/doc doc/$${app}; \
 	done;
 
-console:
+dev:
 	@erl -pa ebin include deps/*/ebin deps/*/include ebin include -boot start_sasl
 
 analyze: checkplt
