@@ -1,7 +1,6 @@
 %-*- mode: erlang -*-
 %%%'   HEADER
-%%% @author {{author_name}} <{{author_email}}> 
-%%% @since {{date}}
+%%% @author {{author_name}} <{{author_email}}>
 %%% @copyright {{copyright_year}} {{author_name}}
 %%% @doc {{description}}
 %%% @end
