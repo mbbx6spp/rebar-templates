@@ -1,3 +1,4 @@
+%-*- mode: erlang -*-
 %%%'   HEADER
 %%% @author {{author_name}} <{{author_email}}> 
 %%% @since {{date}}
@@ -22,4 +23,4 @@ init([]) ->
   {ok, { {one_for_one, 5, 10}, []} }.
 
 %%%.
-%%% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:
+% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:

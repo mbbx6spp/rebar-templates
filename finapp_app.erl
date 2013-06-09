@@ -1,3 +1,4 @@
+%-*- mode: erlang -*-
 %%%'   HEADER
 %%% @author {{author_name}} <{{author_email}}> 
 %%% @since {{date}}
@@ -20,4 +21,4 @@ stop(_State) ->
 %%%'   PRIVATE FUNCTIONS
 
 %%%.
-%%% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:
+% vim: set filetype=erlang tabstop=2 foldmarker=%%%',%%%. foldmethod=marker:
