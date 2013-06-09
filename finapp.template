@@ -1,11 +1,11 @@
 {variables, [
-  {name, "appname"}, 
+  {name, "appname"},
   {app_dir, "."},
   {copyright_year, "2011"},
   {author_name, "Susan Potter"},
   {author_email,"me@susanpotter.net"}
 ]}.
 {dir, "{{app_dir}}/src"}.
-{template, "finapp.app.src", "{{app_dir}}/src/{{name}}.app.src"}.
-{template, "finapp_app.erl", "{{app_dir}}/src/{{name}}_app.erl"}.
-{template, "finapp_sup.erl", "{{app_dir}}/src/{{name}}_sup.erl"}.
+{template, "finapp/finapp.app.src", "{{app_dir}}/src/{{name}}.app.src"}.
+{template, "finapp/finapp_app.erl", "{{app_dir}}/src/{{name}}_app.erl"}.
+{template, "finapp/finapp_sup.erl", "{{app_dir}}/src/{{name}}_sup.erl"}.
