@@ -62,16 +62,14 @@ loop(Host, Opt1) ->
 %%%.
 %%%'   PUBLIC API
 
-%% @spec send_packet(FromJID, ToJID, P) -> ??
-%% @doc 
+%% @doc
 %% @end
 send_packet(FromJID, ToJID, P) ->
     Host = FromJID#jid.lserver,
     Proc = gen_mod:get_module_proc(Host, ?PROCNAME),
     Proc ! {persist, {send, FromJID, ToJID, P}}.
 
-%% @spec receive_packet(FromJID, ToJID, P) -> ??
-%% @doc 
+%% @doc
 %% @end
 receive_packet(_JID, From, To, P) ->
     Host = To#jid.lserver,
@@ -85,7 +83,7 @@ receive_packet(_JID, From, To, P) ->
 persist({recv, From, To, P}) ->
   % do something with this data...like persist it somehow
   ok;
-persist({send, FromJID, ToJID, P}) -> 
+persist({send, FromJID, ToJID, P}) ->
   % do something with this data...like persist it somehow
   ok.
 %%%.
