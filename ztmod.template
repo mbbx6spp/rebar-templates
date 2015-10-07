@@ -1,10 +1,7 @@
 {variables, [
-  {name, "mymodule"}, 
+  {name, "mymodule"},
   {module_title, "Zotonic Module Title"},
   {module_priority, "500"},
-  {copyright_year, "2011"},
-  {author_name, "Susan Potter"},
-  {author_email,"me@susanpotter.net"},
   {description, "<fill in description of Zotonic module here>."}
 ]}.
 {dir, ["mod_{{name}}"]}.

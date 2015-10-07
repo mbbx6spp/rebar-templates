@@ -1,6 +1,4 @@
 {variables, [
-  {name, "myserver"},
-  {copyright_year, "2011"},
-  {author_name, "Susan Potter"},
-  {author_email, "me@susanpotter.net"}]}.
+  {name, "myserver"}
+]}.
 {template, "finsrv.erl", "src/{{name}}_srv.erl"}.

@@ -1,8 +1,5 @@
 {variables, [
-  {name, "compiler_name"}, 
-  {copyright_year, "2011"},
-  {author_name, "Susan Potter"},
-  {author_email,"me@susanpotter.net"}
+  {name, "compiler_name"}
 ]}.
 {dir, "src"}.
 {template, "rebar_compiler.erl", "src/{{name}}.erl"}.

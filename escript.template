@@ -1,8 +1,5 @@
 {variables, [
-  {name, "escriptname"}, 
-  {copyright_year, "2011"},
-  {author_name, "Susan Potter"},
-  {author_email,"me@susanpotter.net"}
+  {name, "escriptname"}
 ]}.
 {dir, "bin"}.
 {template, "escript", "bin/{{name}}"}.
