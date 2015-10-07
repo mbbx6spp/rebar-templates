@@ -104,7 +104,7 @@ received packets you can do the following:
 
 [source,shell]
 ----
- %% inside your rebar based project directory
+ # inside your rebar based project directory
  $ rebar create template=ejabberdmod name=mod_name_here
 ----
 
