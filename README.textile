@@ -2,7 +2,7 @@ h1. Rebar Templates
 
 h2. Overview
 
-This might really only be useful for me, but I thought I would share the 
+This might really only be useful for me, but I thought I would share the
 Rebar templates that I have written to streamline my Erlang development.
 
 So far it only consists of templates for the following:
@@ -14,18 +14,42 @@ So far it only consists of templates for the following:
 * OTP application and supervisor callback modules
 * Nitrogen page handler (for Nitrogen v2+)
 
-h2. Notes
+h2. Status
 
-If you don't already you can clone this Git repository in your ${HOME}/.rebar/templates directory, i.e.:
+Many of these templates are from a past life in Erlang which are no longer
+maintained. I am in the process of culling/curating these templates while
+I upgrade to rebar3 and return to more active Erlang development.
+
+Please be patient during this transition period.
+
+h2. rebar3
+
+If you don't already you can clone this Git repository in your
+`${HOME}/.config/rebar3/templates` directory, like so:
 
 <pre>
 <code>
- $ git clone git://github.com/mbbx6spp/rebar-templates.git ~/.rebar/templates
+ $ git clone git://github.com/mbbx6spp/rebar-templates.git \
+  "${HOME}/.config/rebar3/templates"
+</code>
+</pre>
+
+Be sure to update the `globals` file with your preferred global values.
+
+h2. pre-rebar3
+
+If you don't already you can clone this Git repository in your
+`${HOME}/.rebar/templates` directory, like so:
+
+<pre>
+<code>
+ $ git clone git://github.com/mbbx6spp/rebar-templates.git \
+  "${HOME}/.rebar/templates"
 </code>
 </pre>
 (Thanks "@dizzyd":http://twitter.com/dizzyd for the pointer.)
 
-Alternatively you can add this as a submodule under ${PROJECT_ROOT}/priv/templates if you want to use 
+Alternatively you can add this as a submodule under ${PROJECT_ROOT}/priv/templates if you want to use
 these templates just for a particular project.
 
 h2. Developer(s)
