@@ -1,11 +1,12 @@
-h1. Rebar Templates
+== Rebar Templates
 
-h2. Overview
+=== Overview
 
 This might really only be useful for me, but I thought I would share the
 Rebar templates that I have written to streamline my Erlang development.
 
 So far it only consists of templates for the following:
+
 * ejabberd module
 * OTP gen_server callback modules
 * OTP gen_event callback modules
@@ -14,7 +15,7 @@ So far it only consists of templates for the following:
 * OTP application and supervisor callback modules
 * Nitrogen page handler (for Nitrogen v2+)
 
-h2. Status
+=== Status
 
 Many of these templates are from a past life in Erlang which are no longer
 maintained. I am in the process of culling/curating these templates while
@@ -22,61 +23,67 @@ I upgrade to rebar3 and return to more active Erlang development.
 
 Please be patient during this transition period.
 
-h2. rebar3
+=== rebar3
 
 If you don't already you can clone this Git repository in your
 `${HOME}/.config/rebar3/templates` directory, like so:
 
-<pre>
-<code>
+[source,shell]
+----
  $ git clone git://github.com/mbbx6spp/rebar-templates.git \
   "${HOME}/.config/rebar3/templates"
-</code>
-</pre>
+----
 
 Be sure to update the `globals` file with your preferred global values.
 
-h2. pre-rebar3
+=== pre-rebar3
 
 If you don't already you can clone this Git repository in your
 `${HOME}/.rebar/templates` directory, like so:
 
-<pre>
-<code>
+[source,shell]
+----
  $ git clone git://github.com/mbbx6spp/rebar-templates.git \
   "${HOME}/.rebar/templates"
-</code>
-</pre>
-(Thanks "@dizzyd":http://twitter.com/dizzyd for the pointer.)
+----
 
-Alternatively you can add this as a submodule under ${PROJECT_ROOT}/priv/templates if you want to use
-these templates just for a particular project.
+(Thanks link:http://twitter.com/dizzyd[@dizzyd] for the pointer.)
 
-h2. Developer(s)
+Alternatively you can add this as a submodule under
+`${PROJECT_ROOT}/priv/templates` if you want to use these templates just for
+a particular project.
 
-* "Susan Potter":http://twitter.com/SusanPotter
+=== Developer(s)
 
-h2. Contributor(s)
+* link:http://twitter.com/SusanPotter[Susan Potter]
 
-* "Ahmed D. Omar":http://twitter.com/spawn_think - bug fix in ejabberdmod template (s/init\/7/init\/2/ in exports).
+=== Contributor(s)
 
-h2. Examples
+* link:http://twitter.com/spawn_think[Ahmed D. Omar] - bug fix in ejabberdmod
+  template (`s/init\/7/init\/2/` in exports).
 
-h3. Rebar Project Layout
+=== Examples
 
-If you want to create a new rebar directory layout for your new project you can do the following:
+=== Rebar Project Layout
 
-<pre>
-<code>
+If you want to create a new rebar directory layout for your new project you
+can do the following:
+
+[source,shell]
+----
  $ mkdir project_name
  $ cd project_name
- $ rebar create template=project project_name=project_name description="Describe your project here."
-</code>
-</pre>
+ $ rebar create template=project \
+    project_name=project_name \
+    description="Describe your project here."
+----
 
-This will generate 6 directories and 4 files by default that are organized like the following:
-<pre>
-<code>
+This will generate 6 directories and 4 files by default that are organized
+like the following:
+
+
+[source,shell]
+----
 .
 ├── deps/
 ├── ebin/
@@ -88,19 +95,19 @@ This will generate 6 directories and 4 files by default that are organized like 
 ├── rebar.config
 ├── src/
 └── tests/
-</code>
-</pre>
+----
 
-h3. ejabberd Module
+=== ejabberd Module
 
-To generate a stub of an ejabberd extension module that intercepts sent and received packets you can do the following:
-<pre>
-<code>
+To generate a stub of an ejabberd extension module that intercepts sent and
+received packets you can do the following:
+
+[source,shell]
+----
  %% inside your rebar based project directory
  $ rebar create template=ejabberdmod name=mod_name_here
-</code>
-</pre>
+----
 
 HTH
-"@SusanPotter":http://twitter.com/SusanPotter
+link:http://twitter.com/SusanPotter[@SusanPotter]
 
