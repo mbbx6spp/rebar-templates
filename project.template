@@ -1,5 +1,5 @@
 {variables, [
-  {name, "myproject"}
+  {name, "myproject"},
   {description, "Fill in description of project here."}
 ]}.
 {dir, "deps"}.
