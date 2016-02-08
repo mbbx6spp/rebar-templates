@@ -1,5 +1,0 @@
-{variables, [
-  {name, "elementname"},
-  {app_name, "app_name"}
-]}.
-{template, "nitroelem.erl", "src/{{app_name}}_{{name}}_element.erl"}.

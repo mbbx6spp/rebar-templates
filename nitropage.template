@@ -1,6 +1,0 @@
-{variables, [
-  {name, "pagename"},
-  {app_name, "app_name"}
-]}.
-{dir, "test"}.
-{template, "nitropage.erl", "src/{{app_name}}_{{name}}_page.erl"}.

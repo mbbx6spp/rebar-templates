@@ -1,5 +1,0 @@
-{variables, [
-  {name, "actionname"},
-  {app_name, "app_name"}
-]}.
-{template, "nitroaction.erl", "src/{{app_name}}_{{name}}_action.erl"}.
