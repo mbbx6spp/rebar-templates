@@ -14,39 +14,38 @@
 -compile(export_all).
 -endif.
 %%%.
+%%%'   TYPE DEFINITIONS
+%% TODO: Add type definitions (need to export them if they should be public).
+-type arg()     :: term().
+-type event()   :: term().
+-type state()   :: term().
+-type handler() :: module() | {module(), id()}.
+-type id()      :: term().
+
+%%%.
 %%%'   PUBLIC API
 %% TODO: Add public API methods here...
 
 %%%.
 %%%'   CALLBACKS
+
+-spec init([arg()]) -> {ok, [arg()]}.
 %% @private
-%% @spec init(Args0) -> {ok, Args1}
-%% where
-%%       Args0 = Args1 = [term()]
 %% @doc initializes gen_event
 init([]) ->
-  {ok, Args}.
+  {ok, []}.
 
+-spec handle_event(event(), state()) ->
+  {ok, state()} | {ok, state(), hibernate} |
+  {swap_handler, arg(), state(), handler(), arg()} | remove_handler.
 %% @private
-%% @spec handle_event(Event, State0) -> {ok, State1} | {ok, State1, hibernate} |
-%%         {swap_handler, Args1, State1, Handler2, Args2} | remove_handler
-%% where
-%%       Event = term()
-%%       State0 = State1 = term()
-%%       Args1 = Args2 = term()
-%%       Handler2 = Module2 | {Module2, Id}
-%%       Module2 = atom()
-%%       Id = term()
 %% @doc handle/log event
 handle_event(_Message, State) ->
   {ok, State}.
 
-%% @spec terminate(Args, State0) -> ok
-%% where
-%%       State0 = term()
-%%       Args = term() | {stop, Reason} | stop | remove_handler |
-%%         {error, {'EXIT', Reason}} | {error, Term}
-%%       Reason = Term = term()
+-type terminate_args() :: term() | {stop, term()} | stop | remove_handler |
+  {error, {'EXIT', term()}} | {error, term()}.
+-spec terminate(terminate_args(), state()) -> ok.
 %% terminates gen_event
 terminate(_Args, _State) ->
   ok.

@@ -17,13 +17,14 @@
 % TODO: If unnamed server, remove definition below.
 -define(SERVER, ?MODULE).
 %%%.
+%%%'   TYPE DEFINITIONS
+-type start_link_error() :: {already_started, pid()} | term().
+
+%%%.
 %%%'   PUBLIC API
 
 %% @doc starts gen_server implementation and caller links to the process too.
--spec start_link() -> {ok, Pid} | ignore | {error, Error}
-  when
-      Pid :: pid(),
-      Error :: {already_started, Pid} | term().
+-spec start_link() -> {ok, pid()} | ignore | {error, start_link_error()}.
 start_link() ->
   % TODO: decide whether to name gen_server callback implementation or not.
   % gen_server:start_link(?MODULE, [], []). % for unnamed gen_server
@@ -53,7 +54,7 @@ handle_cast(_Req, State) ->
   {noreply, State}.
 
 %% @callback gen_server
-handle_info(_Info, State) -> 
+handle_info(_Info, State) ->
   {noreply, State}.
 
 %% @callback gen_server
