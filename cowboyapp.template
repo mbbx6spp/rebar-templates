@@ -1,0 +1,9 @@
+{description, "Cowboy OTP-based application."}.
+{variables, [
+  {name, "appname"},
+  {appdir, ".", "Path to application directory."}
+]}.
+{dir, "{{appdir}}/src"}.
+{template, "cowboy/app.src", "{{appdir}}/src/{{name}}.app.src"}.
+{template, "cowboy/app.erl", "{{appdir}}/src/{{name}}_app.erl"}.
+{template, "cowboy/sup.erl", "{{appdir}}/src/{{name}}_sup.erl"}.

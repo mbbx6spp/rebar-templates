@@ -1,5 +1,5 @@
 {variables, [
-  {copyright_year, "2015"},
+  {copyright_year, "2016"},
   {author_name, "Susan Potter"},
   {author_email, "me@susanpotter.net"}
 ]}.

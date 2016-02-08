@@ -1,7 +1,8 @@
 {variables, [
-  {name, "appname"}
+  {name, "appname"},
+  {appdir, "Path to application directory."}
 ]}.
-{dir, "{{app_dir}}/src"}.
-{template, "finapp/finapp.app.src", "{{app_dir}}/src/{{name}}.app.src"}.
-{template, "finapp/finapp_app.erl", "{{app_dir}}/src/{{name}}_app.erl"}.
-{template, "finapp/finapp_sup.erl", "{{app_dir}}/src/{{name}}_sup.erl"}.
+{dir, "{{appdir}}/src"}.
+{template, "finapp/finapp.app.src", "{{appdir}}/src/{{name}}.app.src"}.
+{template, "finapp/finapp_app.erl", "{{appdir}}/src/{{name}}_app.erl"}.
+{template, "finapp/finapp_sup.erl", "{{appdir}}/src/{{name}}_sup.erl"}.
